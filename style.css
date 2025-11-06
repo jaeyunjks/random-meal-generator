@@ -20,20 +20,37 @@ h3 {
     text-align: center;
 }
 
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input,
+select,
 button {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
     background-color: #4CAF50;
     color: white;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
 }
 
 button:hover {
     background-color: #45a049;
+}
+
+.loading {
+    text-align: center;
+    font-size: 18px;
+    margin: 20px 0;
 }
 
 .meal {
@@ -62,4 +79,13 @@ iframe {
     width: 100%;
     max-width: 560px;
     height: 315px;
+}
+
+#favorites-list li {
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#favorites-list li:hover {
+    text-decoration: underline;
 }

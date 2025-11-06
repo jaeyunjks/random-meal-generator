@@ -11,18 +11,44 @@
 <body>
     <div class="container">
         <h1>Random Meal Generator</h1>
-        <button id="generate-btn">Generate Random Meal</button>
 
-        <div id="meal-container" class="meal">
-            <h2 id="meal-name">Click the button to get a meal!</h2>
-            <img id="meal-image" src="" alt="Meal Image" style="display: none;">
+        <!-- Tambah search dan filter -->
+        <div class="controls">
+            <input type="text" id="search-input" placeholder="Search meal by name...">
+            <button id="search-btn">Search</button>
+
+            <select id="category-select">
+                <option value="">Select Category</option>
+                <!-- Options akan diisi oleh JS -->
+            </select>
+            <button id="filter-btn">Filter by Category</button>
+
+            <button id="generate-btn">Generate Random Meal</button>
+        </div>
+
+        <!-- Loading spinner -->
+        <div id="loading" class="loading" style="display: none;">Loading...</div>
+
+        <!-- Meal display -->
+        <div id="meal-container" class="meal" style="display: none;">
+            <h2 id="meal-name"></h2>
+            <img id="meal-image" src="" alt="Meal Image">
             <h3>Ingredients:</h3>
             <ul id="ingredients-list"></ul>
             <h3>Instructions:</h3>
             <p id="instructions"></p>
             <h3>YouTube Video:</h3>
-            <div id="youtube-video" style="display: none;"></div>
+            <div id="youtube-video"></div>
+            <button id="favorite-btn">Add to Favorites</button>
         </div>
+
+        <!-- Favorites section -->
+        <div id="favorites-container">
+            <h2>Favorites</h2>
+            <ul id="favorites-list"></ul>
+        </div>
+
+        <p id="error-message" style="color: red; display: none;"></p>
     </div>
 
     <script src="script.js"></script>
