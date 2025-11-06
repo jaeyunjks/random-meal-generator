@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,12 +6,9 @@
 
 body {
   font-family: 'Nunito', sans-serif;
+  background: linear-gradient(135deg, #FFF5E1 0%, #F9E4E0 100%);
 }
 
 .dark {
-  --bg: #2C5364;
-  --text: #FFF5E1;
-  --mint: #4A4A4A;
-  --blush: #4A4A4A;
-  --cream: #2C5364;
+  background: linear-gradient(135deg, #2C5364 0%, #203A43 100%);
 }
