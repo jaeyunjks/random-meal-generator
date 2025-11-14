@@ -4,6 +4,12 @@ import jwt from 'jsonwebtoken';
 
 export const registerUser = async (req, res) => {
     const { username, password } = req.body;
+    if (!username || !password) {
+        return res.status(400).json({ message: 'Username dan password wajib diisi' });
+    }
+    if (password.length < 6) {
+        return res.status(400).json({ message: 'Password minimal 6 karakter' });
+    }
     try {
         const hash = await bcrypt.hash(password, 10);
         const newUser = await User.create({ username, password: hash });
