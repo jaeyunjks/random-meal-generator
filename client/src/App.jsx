@@ -5,6 +5,7 @@ import MealResult from './components/MealResult.jsx';
 import SavedMeals from './components/SavedMeals.jsx';
 import Register from './pages/Register.jsx';
 
+
 function App() {
   const [page, setPage] = useState('landing');
   const [mood, setMood] = useState('');
